@@ -32,6 +32,7 @@ public class UserController {
     @RequestMapping(value = "/select")
     public ModelAndView select(HttpServletRequest request) {
         ModelAndView result = new ModelAndView("index");
+        int a = 2/0;
         request.getSession().setAttribute("aaa",1111);
         result.addObject("userList",userService.getAll());
         return result;
